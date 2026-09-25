@@ -150,10 +150,6 @@ const updateProductQuantity = asyncHandler( async (req, res) => {
             )
         }
 
-
-
-
-
 })
 
 const deleteproductToCart = asyncHandler( async (req, res) => {

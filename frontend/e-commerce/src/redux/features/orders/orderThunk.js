@@ -4,9 +4,7 @@ import api from "../../../api/axios";
 export const fetchUserOrders = createAsyncThunk("orders/fetchUserOrders",
     async(_, {rejectWithValue}) => {
         try {
-            const response = await api.get(`/api/order/my-orders`,{
-                withCredentials: true
-            });
+            const response = await api.get(`/api/order/my-orders`);
         
             return response?.data?.data
         } catch (error) {
