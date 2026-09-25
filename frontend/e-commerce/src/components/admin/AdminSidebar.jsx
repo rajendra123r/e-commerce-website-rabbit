@@ -4,7 +4,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom"
 import { logout } from "../../redux/features/auth/authSlice"
 import { clearCart } from "../../redux/features/cart/cartSlice"
 
-const AdminSidebar = () => {
+const AdminSidebar = ({ setIsSidebarOpen }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -29,6 +29,7 @@ const AdminSidebar = () => {
             className={({ isActive }) => isActive ? "bg-gray-700 text-white py-3 px-4 rounded flex items-center space-x-2"
             : "text-gray-300 hover:bg-gray-700 hover:text-white py-3 px-4 rounded flex items-center space-x-2"
             }
+            onClick={() => setIsSidebarOpen(false) }
             >
                 <FaUser/>
                 <span>Users</span>
@@ -38,6 +39,7 @@ const AdminSidebar = () => {
             className={({ isActive }) => isActive ? "bg-gray-700 text-white py-3 px-4 rounded flex items-center space-x-2"
             : "text-gray-300 hover:bg-gray-700 hover:text-white py-3 px-4 rounded flex items-center space-x-2"
             }
+            onClick={() => setIsSidebarOpen(false) }
             >
                 <FaBoxOpen/>
                 <span>Products</span>
@@ -47,6 +49,7 @@ const AdminSidebar = () => {
             className={({ isActive }) => isActive ? "bg-gray-700 text-white py-3 px-4 rounded flex items-center space-x-2"
             : "text-gray-300 hover:bg-gray-700 hover:text-white py-3 px-4 rounded flex items-center space-x-2"
             }
+            onClick={() => setIsSidebarOpen(false) }
             >
                 <FaClipboardList/>
                 <span>Orders</span>
@@ -56,6 +59,7 @@ const AdminSidebar = () => {
             className={({ isActive }) => isActive ? "bg-gray-700 text-white py-3 px-4 rounded flex items-center space-x-2"
             : "text-gray-300 hover:bg-gray-700 hover:text-white py-3 px-4 rounded flex items-center space-x-2"
             }
+            onClick={() => setIsSidebarOpen(false) }
             >
                 <FaStore/>
                 <span>Shop</span>
