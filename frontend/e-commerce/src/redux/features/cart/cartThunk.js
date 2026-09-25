@@ -87,8 +87,7 @@ export const removeFromCart = createAsyncThunk("cart/removeFromCart", async ({ p
 export const mergeCart = createAsyncThunk("cart/mergeCart", async ({guestId, user}, {rejectWithValue}) => {
     try {
         const response = await api.post(`/api/cart/merge`,
-            { guestId, user },
-           
+            { guestId, user },    
         );
 
         return response?.data?.data

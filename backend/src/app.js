@@ -1,3 +1,12 @@
+import dotenv from "dotenv"
+
+dotenv.config({
+    path: "./.env"
+});
+
+
+
+
 import express from "express"
 import cors from "cors"
 import cookieParser  from "cookie-parser"
@@ -5,13 +14,13 @@ import cookieParser  from "cookie-parser"
 
 const app = express();
 
-
 app.use(cors(
     {
         origin: process.env.CLIENT_URL,
         credentials: true,
     }
 ))
+
 
 //  app.get("/first",(req, res) => {
 //     return res.send("this server is running  successfully")
